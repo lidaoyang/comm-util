@@ -215,6 +215,7 @@ public class Common {
 		} catch (Exception e) {
 			j.setSuccess(false);
 			j.setNum(-1);
+			return j;
 		}
 		boolean ret = send_code_channel(content, phone);
 		if (ret) {
@@ -230,6 +231,7 @@ public class Common {
 				j.setSuccess(false);
 				j.setNum(-1);
 				LOG.info("[set_verify_code_fail]====Verify Code: phone => "+phone+" ; code => "+code);
+				return j;
 			}
 		}
 		return j;
